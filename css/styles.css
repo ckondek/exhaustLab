@@ -1,0 +1,20 @@
+body{
+
+  background:black;
+}
+h4{
+  font-family: Montserrat;
+  color:white;
+  text-align: center;
+}
+
+.container{
+  align-content: center;
+  text-align: center;
+}
+
+
+.photoBox{
+  width:65vw;
+  margin-bottom: 30px;
+}

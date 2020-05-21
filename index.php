@@ -2,11 +2,15 @@
 <html>
   <head>
     <title>"Welcome to ExhaustLab"</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Montserrat&display=swap" rel="stylesheet">
+    
+    <script src="scripts/script.js"></script>
   </head>
 
   <body>
-    <p>ohh the re is so much data out there, every day I make more,<br>
-      and I don't know where it goes
+    <p id="test">Various projects from Chris Kondek
+      <a href="hansa.php">pictures Hansaplatz</a>
     </p>
   </body>
 </html>

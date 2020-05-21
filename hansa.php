@@ -16,7 +16,7 @@ $path="http://d1ua7ibh28zfpl.cloudfront.net/hansa/";
 
 foreach($picList as $pic ){
   echo "<img id='" .$pic['name']."' class='photoBox' src='".$path.$pic['name']."'>y</a>" ;
-  echo "<img id='" .$pic['name']."' class='photoBox' src='".$path.$pic['name']."'>y</a>" ;
+  
 }
 ?>
 </div>

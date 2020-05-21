@@ -8,16 +8,20 @@
   <link href="css/styles.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-  <h4>hansaplatz</h4>
-  <div id='hansaphotos' class="container">
-<?php
-$picList = json_decode(file_get_contents("json/hansa.json"),TRUE);
-$path="http://d1ua7ibh28zfpl.cloudfront.net/hansa/";
 
-foreach($picList as $pic ){
-  echo "<img id='" .$pic['name']."' class='photoBox' src='".$path.$pic['name']."'>y</a>" ;
-  echo "<img id='" .$pic['name']."' class='photoBox' src='".$path.$pic['name']."'>y</a>" ;
-}
-?>
+  <div id='hansaphotos' class="container">
+    <h4>hansaplatz</h4>
+<?php
+      function picSort($a,$b){
+                              if ($a["oder"]==$b["order"]) return 0;
+                              return ($a["order"]<$b["order"])?-1:1;
+                              }
+      $picList = json_decode(file_get_contents("json/hansa.json"),TRUE);
+      usort($picList,"picSort");
+      $path="http://d1ua7ibh28zfpl.cloudfront.net/hansa/";
+      foreach($picList as $pic ){
+        echo "<img id='" .$pic['name']."' class='photoBox' src='".$path.$pic['name']."'></a>" ;
+      }
+  ?>
 </div>
 </body>
